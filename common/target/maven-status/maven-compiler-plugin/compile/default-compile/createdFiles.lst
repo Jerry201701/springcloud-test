@@ -1,0 +1,5 @@
+com\cloud\common\utils\IOUtils.class
+com\cloud\common\utils\ReflectionUtils.class
+com\cloud\common\utils\DateTimeUtils.class
+com\cloud\common\utils\StringUtils.class
+com\cloud\common\constants\HttpStatus.class

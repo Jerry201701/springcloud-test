@@ -1,0 +1,32 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: config-service
+  cloud:
+    zookeeper:
+      connect-string: 123.206.64.103:2181
+      discovery:
+        enabled: true
+        root: /config
+    config:
+      label: master  # git仓库分支
+      server:
+        git:
+          uri: https://github.com/Jerry201701/springcloud-demo.git  # 配置git仓库的地址
+          search-paths: config-repo  # git仓库地址下的相对地址，可以配置多个，用,分割。
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+    bus:
+      trace:
+        enabled: true
+
+#          username: username  # git仓库的账号
+#          password: password  # git仓库的密码
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

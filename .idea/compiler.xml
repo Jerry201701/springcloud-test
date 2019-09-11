@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="consumer" />
+        <module name="common" />
+        <module name="config" />
+        <module name="hystrix" />
+        <module name="core" />
+        <module name="producer" />
+        <module name="backup" />
+        <module name="monitor" />
+        <module name="admin" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="backup" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="config" options="-parameters" />
+      <module name="consumer" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="hystrix" options="-parameters" />
+      <module name="monitor" options="-parameters" />
+      <module name="producer" options="-parameters" />
+    </option>
+  </component>
+</project>
