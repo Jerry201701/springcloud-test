@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="consumer" />
+        <module name="monitor" />
         <module name="common" />
         <module name="config" />
         <module name="hystrix" />
         <module name="core" />
         <module name="producer" />
         <module name="backup" />
-        <module name="monitor" />
+        <module name="consumer" />
         <module name="admin" />
       </profile>
     </annotationProcessing>

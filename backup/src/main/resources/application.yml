@@ -1,0 +1,35 @@
+# tomcat
+server:
+  port: 8002
+# spring boot admin
+spring:
+  application:
+    name: backup-service
+  cloud:
+    zookeeper:
+      discovery:
+        enabled: true
+        root: /backup
+      connect-string: 123.206.64.103:2181
+
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8000"
+# 开放健康检查接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+# backup datasource
+kitty:
+  backup:
+    datasource:
+      host: localhost
+      userName: root
+      password: root2019
+      database: kitty
