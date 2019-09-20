@@ -1,0 +1,33 @@
+
+server:
+  port: 8009
+spring:
+  application:
+    name: service-zuul
+  cloud:
+    zookeeper:
+      discovery:
+        enabled: true
+      connect-string: 123.206.64.103:2181
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8000"
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: producer-service
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+
+# 开放健康检查接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      name: consumer-application #配置文件名的前部分
+      profile: dev #配置文件名的后缀,环境名
+      label: master #仓库分支
+      discovery:
+        enabled: true
+        service-id: config-service
+    # kafka
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+    bus:
+      trace:
+        enabled: true
