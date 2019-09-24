@@ -15,7 +15,7 @@ public class TestController {
     String port;
     @Autowired
     private TestFeign feign;
-    /*
+
     @Value("${consumer.config.test}")
     private String configValue;
     @GetMapping("/config/test")
@@ -24,7 +24,7 @@ public class TestController {
         return configValue;
     }
 
-     */
+
     @RequestMapping("/feign/test")
     public String feignTest(@RequestParam(name = "word")String word){
         System.out.println("开始用feign调用");
