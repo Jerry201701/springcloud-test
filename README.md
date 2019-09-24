@@ -17,6 +17,6 @@ zuul:8009
 3,配置中心采用bus+kafka
 4.准备把网关改成gateway,捣腾半天最后发现zookeeper没有集成，自己写暂时也没搞出来，先就用zuul吧
 5，zookeeper也可以做成配置中心，做到实时刷新，但是从zuki上传txt文件，应该是读取txt文件后生成
-key-value，感觉不方便，这个根据具体项目吧，我还是不继续用bus+kafka
+key-value，感觉不方便，这个根据具体项目吧，我还是继续用bus+kafka作配置中心
 
 
